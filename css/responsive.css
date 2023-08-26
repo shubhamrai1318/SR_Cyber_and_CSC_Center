@@ -759,6 +759,11 @@
 	body {
 		overflow-x: hidden;
 	}
+	
+	.rev-slidebg {
+    background-size: cover; /* Adjust image size to cover the container */
+	}
+	
 	.center {
 		align-items: center;
 	}
