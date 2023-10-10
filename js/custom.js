@@ -45,6 +45,30 @@ $("#navbar_menu").menumaker({
         )
     });
 	
+$('.trigger-more').click(function(){
+    if($(this).hasClass('collapsed'))  {
+      $(this).text('Less');
+    } else {
+      $(this).text('More');
+    }
+});
+
+$('.trigger-more.trigger-show-more').click(function(){
+    if($(this).hasClass('collapsed'))  {
+      $(this).text('Show Less');
+    } else {
+      $(this).text('Show More');
+    }
+});
+
+$('.trigger-more.trigger-read-more').click(function(){
+    if($(this).hasClass('collapsed'))  {
+      $(this).text('Read Less');
+    } else {
+      $(this).text('Read More');
+    }
+});
+
 /** Casestudies Tab_bar js **/	
 	
 	$(document).ready(function(){
