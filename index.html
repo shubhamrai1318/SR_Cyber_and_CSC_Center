@@ -69,7 +69,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 
-   <style>
+ <style>
         /* Style for the fixed navigation bar */
         .fixed-bar {
             position: fixed;
@@ -82,7 +82,6 @@
             justify-content: space-around; /* Adjust the spacing between icons */
             padding: 10px 0; /* Padding for the icons */
             z-index: 999; /* Ensure the footer is on top of other content */
-
         }
 
         /* Style for the icons */
@@ -709,7 +708,7 @@
 
 
 
-<!-- Fixed navigation bar at the bottom -->
+ <!-- Fixed navigation bar at the bottom -->
     <div class="fixed-bar">
         <!-- Call icon -->
         <a class="icon" href="tel:+917985170827" target="_blank">
@@ -717,7 +716,7 @@
         </a>
 
         <!-- WhatsApp icon -->
-        <a class="icon" href="https://wa.me/917985170827?text=Hello Shobhit"" target="_blank">
+        <a class="icon" href="https://wa.me/917985170827?text=Hello Shobhit" target="_blank">
             <i class="fa fa-whatsapp"></i>
         </a>
 
@@ -731,7 +730,6 @@
             <i class="fa fa-instagram"></i>
         </a>
     </div>
-	
 
 	
 <!-- js section -->
@@ -885,24 +883,26 @@
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
- <script>
+<script>
         // JavaScript to hide the links (icons) when the user scrolls to the bottom
-        window.onscroll = function () {
-            var footer = document.querySelector(".fixed-bar");
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                // User has scrolled to the bottom, hide the links (icons)
-                var icons = footer.querySelectorAll(".icon");
-                for (var i = 0; i < icons.length; i++) {
-                    icons[i].style.display = "none";
+        document.addEventListener("DOMContentLoaded", function () {
+            window.onscroll = function () {
+                var footer = document.querySelector(".fixed-bar");
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    // User has scrolled to the bottom, hide the links (icons)
+                    var icons = footer.querySelectorAll(".icon");
+                    for (var i = 0; i < icons.length; i++) {
+                        icons[i].style.display = "none";
+                    }
+                } else {
+                    // User is not at the bottom, show the links (icons)
+                    var icons = footer.querySelectorAll(".icon");
+                    for (var i = 0; i < icons.length; i++) {
+                        icons[i].style.display = "inline";
+                    }
                 }
-            } else {
-                // User is not at the bottom, show the links (icons)
-                var icons = footer.querySelectorAll(".icon");
-                for (var i = 0; i < icons.length; i++) {
-                    icons[i].style.display = "inline";
-                }
-            }
-        };
+            };
+        });
     </script>
 </body>
 </html>
