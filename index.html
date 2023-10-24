@@ -884,26 +884,19 @@
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
-<script>
-        // JavaScript to hide the links (icons) when the user scrolls to the bottom
-        document.addEventListener("DOMContentLoaded", function () {
-            window.onscroll = function () {
-                var footer = document.querySelector(".fixed-bar");
-                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                    // User has scrolled to the bottom, hide the links (icons)
-                    var icons = footer.querySelectorAll(".icon");
-                    for (var i = 0; i < icons.length; i++) {
-                        icons[i].style.display = "none";
-                    }
-                } else {
-                    // User is not at the bottom, show the links (icons)
-                    var icons = footer.querySelectorAll(".icon");
-                    for (var i = 0; i < icons.length; i++) {
-                        icons[i].style.display = "inline";
-                    }
-                }
-            };
+    <script>
+        // JavaScript to hide the links (icons) when the user reaches the bottom
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector(".fixed-bar");
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                // User has scrolled to the bottom, hide the links (icons)
+                footer.style.display = "none";
+            } else {
+                // User is not at the bottom, show the links (icons)
+                footer.style.display = "flex";
+            }
         });
     </script>
+
 </body>
 </html>
