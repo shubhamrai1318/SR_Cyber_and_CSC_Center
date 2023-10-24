@@ -81,6 +81,8 @@
             display: flex;
             justify-content: space-around; /* Adjust the spacing between icons */
             padding: 10px 0; /* Padding for the icons */
+            z-index: 999; /* Ensure the footer is on top of other content */
+
         }
 
         /* Style for the icons */
@@ -883,8 +885,24 @@
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
-<!-- google map js -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-<!-- end google map js -->
+ <script>
+        // JavaScript to hide the links (icons) when the user scrolls to the bottom
+        window.onscroll = function () {
+            var footer = document.querySelector(".fixed-bar");
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                // User has scrolled to the bottom, hide the links (icons)
+                var icons = footer.querySelectorAll(".icon");
+                for (var i = 0; i < icons.length; i++) {
+                    icons[i].style.display = "none";
+                }
+            } else {
+                // User is not at the bottom, show the links (icons)
+                var icons = footer.querySelectorAll(".icon");
+                for (var i = 0; i < icons.length; i++) {
+                    icons[i].style.display = "inline";
+                }
+            }
+        };
+    </script>
 </body>
 </html>
