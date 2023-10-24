@@ -69,7 +69,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 
-    <style>
+   <style>
         /* Style for the fixed navigation bar */
         .fixed-bar {
             position: fixed;
@@ -78,13 +78,14 @@
             width: 100%;
             background-color: #333; /* Background color */
             color: white; /* Text color */
-            padding: 10px; /* Padding for the icons */
+            display: flex;
+            justify-content: space-around; /* Adjust the spacing between icons */
+            padding: 10px 0; /* Padding for the icons */
         }
 
         /* Style for the icons */
         .icon {
             font-size: 20px; /* Adjust the icon size */
-            margin: 10px; /* Spacing between icons */
         }
     </style>
 
@@ -710,22 +711,22 @@
     <div class="fixed-bar">
         <!-- Call icon -->
         <a class="icon" href="tel:YOUR_PHONE_NUMBER" target="_blank">
-            <i class="fa fa-phone"></i> 
+            <i class="fa fa-phone"></i>
         </a>
 
         <!-- WhatsApp icon -->
         <a class="icon" href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank">
-            <i class="fa fa-whatsapp"></i> 
+            <i class="fa fa-whatsapp"></i>
         </a>
 
         <!-- Facebook icon -->
         <a class="icon" href="https://www.facebook.com/YOUR_FACEBOOK_PAGE" target="_blank">
-            <i class="fa fa-facebook"></i> 
+            <i class="fa fa-facebook"></i>
         </a>
 
         <!-- Instagram icon -->
         <a class="icon" href="https://www.instagram.com/YOUR_INSTAGRAM_PAGE" target="_blank">
-            <i class="fa fa-instagram"></i> 
+            <i class="fa fa-instagram"></i>
         </a>
     </div>
 	
